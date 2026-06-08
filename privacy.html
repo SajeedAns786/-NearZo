@@ -28,15 +28,19 @@
       
       <!-- Desktop Navigation Menu -->
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="faq.html" class="nav-link">FAQs</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link" data-translate="nav-home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-translate="nav-about">About Us</a></li>
+        <li><a href="faq.html" class="nav-link" data-translate="nav-faq">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link" data-translate="nav-contact">Contact Us</a></li>
       </ul>
       
       <!-- CTA Action Buttons -->
       <div class="nav-actions">
-        <a href="download.html" class="btn btn-primary btn-sm">Download App</a>
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn-en active">EN</button>
+          <button class="lang-btn lang-btn-hi">हिन्दी</button>
+        </div>
+        <a href="download.html" class="btn btn-primary btn-sm" data-translate="btn-download">Download App</a>
         <button class="hamburger" aria-label="Toggle Menu">
           <span></span>
           <span></span>
@@ -50,16 +54,22 @@
   <div class="overlay"></div>
   <div class="mobile-drawer">
     <ul class="mobile-nav">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-      <li><a href="faq.html" class="mobile-nav-link">FAQs</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+      <li style="margin-bottom: 15px; padding: 0 4px;">
+        <div class="lang-switcher" style="width: 100%; display: flex; justify-content: space-around;">
+          <button class="lang-btn mobile-lang-btn-en active" style="flex: 1;">English</button>
+          <button class="lang-btn mobile-lang-btn-hi" style="flex: 1;">हिन्दी</button>
+        </div>
+      </li>
+      <li><a href="index.html" class="mobile-nav-link" data-translate="nav-home">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link" data-translate="nav-about">About Us</a></li>
+      <li><a href="faq.html" class="mobile-nav-link" data-translate="nav-faq">FAQs</a></li>
+      <li><a href="contact.html" class="mobile-nav-link" data-translate="nav-contact">Contact Us</a></li>
       <li><a href="privacy.html" class="mobile-nav-link active">Privacy Policy</a></li>
       <li><a href="terms.html" class="mobile-nav-link">Terms & Conditions</a></li>
     </ul>
     <div class="mobile-actions">
-      <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary">Download APK</a>
-      <a href="contact.html" class="btn btn-secondary">Register as Dealer</a>
+      <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary" data-translate="btn-download-apk">Download APK</a>
+      <a href="contact.html" class="btn btn-secondary" data-translate="btn-register">Register as Dealer</a>
     </div>
   </div>
 

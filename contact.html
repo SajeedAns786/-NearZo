@@ -27,15 +27,19 @@
       
       <!-- Desktop Navigation Menu -->
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="faq.html" class="nav-link">FAQs</a></li>
-        <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link" data-translate="nav-home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-translate="nav-about">About Us</a></li>
+        <li><a href="faq.html" class="nav-link" data-translate="nav-faq">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link active" data-translate="nav-contact">Contact Us</a></li>
       </ul>
       
       <!-- CTA Action Buttons -->
       <div class="nav-actions">
-        <a href="download.html" class="btn btn-primary btn-sm">Download App</a>
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn-en active">EN</button>
+          <button class="lang-btn lang-btn-hi">हिन्दी</button>
+        </div>
+        <a href="download.html" class="btn btn-primary btn-sm" data-translate="btn-download">Download App</a>
         <button class="hamburger" aria-label="Toggle Menu">
           <span></span>
           <span></span>
@@ -49,23 +53,29 @@
   <div class="overlay"></div>
   <div class="mobile-drawer">
     <ul class="mobile-nav">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-      <li><a href="faq.html" class="mobile-nav-link">FAQs</a></li>
-      <li><a href="contact.html" class="mobile-nav-link active">Contact Us</a></li>
+      <li style="margin-bottom: 15px; padding: 0 4px;">
+        <div class="lang-switcher" style="width: 100%; display: flex; justify-content: space-around;">
+          <button class="lang-btn mobile-lang-btn-en active" style="flex: 1;">English</button>
+          <button class="lang-btn mobile-lang-btn-hi" style="flex: 1;">हिन्दी</button>
+        </div>
+      </li>
+      <li><a href="index.html" class="mobile-nav-link" data-translate="nav-home">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link" data-translate="nav-about">About Us</a></li>
+      <li><a href="faq.html" class="mobile-nav-link" data-translate="nav-faq">FAQs</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active" data-translate="nav-contact">Contact Us</a></li>
       <li><a href="privacy.html" class="mobile-nav-link">Privacy Policy</a></li>
       <li><a href="terms.html" class="mobile-nav-link">Terms & Conditions</a></li>
     </ul>
     <div class="mobile-actions">
-      <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary">Download APK</a>
-      <a href="contact.html" class="btn btn-secondary">Register as Dealer</a>
+      <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary" data-translate="btn-download-apk">Download APK</a>
+      <a href="contact.html" class="btn btn-secondary" data-translate="btn-register">Register as Dealer</a>
     </div>
   </div>
 
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>Contact Us</h1>
+      <h1 data-translate="contact-header-title">Contact Us</h1>
       <div class="page-breadcrumbs">
         <a href="index.html">Home</a>
         <span>/</span>
@@ -80,35 +90,35 @@
       
       <!-- Left side contact card form -->
       <div class="contact-card">
-        <h2>Register as Dealer / Send Inquiry</h2>
+        <h2 data-translate="contact-form-title">Register as Dealer / Send Inquiry</h2>
         <form id="nearzo-contact-form" novalidate>
           <div class="form-group">
-            <label for="contact-name">Full Name *</label>
+            <label for="contact-name" data-translate="contact-lbl-name">Full Name *</label>
             <input type="text" id="contact-name" class="form-control" placeholder="Enter your name" required>
           </div>
           
           <div class="form-group">
-            <label for="contact-phone">Mobile Number *</label>
+            <label for="contact-phone" data-translate="contact-lbl-phone">Mobile Number *</label>
             <input type="tel" id="contact-phone" class="form-control" placeholder="Enter 10-digit mobile number" required>
           </div>
           
           <div class="form-group">
-            <label for="contact-business">Business Name *</label>
+            <label for="contact-business" data-translate="contact-lbl-business">Business Name *</label>
             <input type="text" id="contact-business" class="form-control" placeholder="Enter tyre shop / business name" required>
           </div>
           
           <div class="form-group">
-            <label for="contact-city">City / Area *</label>
+            <label for="contact-city" data-translate="contact-lbl-city">City / Area *</label>
             <input type="text" id="contact-city" class="form-control" placeholder="e.g. Panvel, Navi Mumbai" required>
           </div>
           
           <div class="form-group">
-            <label for="contact-message">Message (Optional)</label>
+            <label for="contact-message" data-translate="contact-lbl-message">Message (Optional)</label>
             <textarea id="contact-message" class="form-control" placeholder="Specify tyre requirements or query..."></textarea>
           </div>
           
           <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
-            Submit Dealer Registration
+            <span data-translate="contact-btn-submit">Submit Dealer Registration</span>
           </button>
         </form>
       </div>
@@ -118,13 +128,13 @@
         
         <!-- Info Card -->
         <div class="contact-info-card">
-          <h2 class="contact-info-title">Business Support Desk</h2>
+          <h2 class="contact-info-title" data-translate="contact-support-title">Business Support Desk</h2>
           <div class="contact-info-list">
             
             <div class="contact-info-item">
               <div class="contact-info-icon">✉</div>
               <div class="contact-info-content">
-                <h4>Email Support</h4>
+                <h4 data-translate="contact-support-email">Email Support</h4>
                 <a href="mailto:support@nearzo.in">support@nearzo.in</a>
               </div>
             </div>
@@ -132,7 +142,7 @@
             <div class="contact-info-item">
               <div class="contact-info-icon">📞</div>
               <div class="contact-info-content">
-                <h4>Call Support</h4>
+                <h4 data-translate="contact-support-call">Call Support</h4>
                 <a href="tel:+919876543210">+91 98765 43210</a>
               </div>
             </div>
@@ -140,7 +150,7 @@
             <div class="contact-info-item">
               <div class="contact-info-icon">💬</div>
               <div class="contact-info-content">
-                <h4>WhatsApp Chat</h4>
+                <h4 data-translate="contact-support-wa">WhatsApp Chat</h4>
                 <a href="https://wa.me/919876543210?text=Hi%20NearZo%20Support%2C%20I%20have%20a%20business%20query." target="_blank">Chat with Support</a>
               </div>
             </div>
@@ -148,7 +158,7 @@
             <div class="contact-info-item">
               <div class="contact-info-icon">📍</div>
               <div class="contact-info-content">
-                <h4>Head Office</h4>
+                <h4 data-translate="contact-support-office">Head Office</h4>
                 <p style="font-weight: 500;">Sector 15, CBD Belapur, Navi Mumbai, Maharashtra 400614</p>
               </div>
             </div>

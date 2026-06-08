@@ -2008,3 +2008,51 @@ footer {
 .toast-notification.show {
   top: 30px;
 }
+
+/* --- Language Switcher Toggle Pill --- */
+.lang-switcher {
+  display: inline-flex;
+  background-color: rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  gap: 2px;
+  align-items: center;
+}
+
+header.scrolled .lang-switcher {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  color: var(--text-medium);
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-btn.active {
+  background: var(--primary-orange-gradient);
+  color: var(--text-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--primary-orange);
+}
+
+@media (max-width: 992px) {
+  .lang-switcher {
+    margin-right: 10px;
+  }
+}
+

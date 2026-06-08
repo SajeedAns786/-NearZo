@@ -27,15 +27,19 @@
       
       <!-- Desktop Navigation Menu -->
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link active">About Us</a></li>
-        <li><a href="faq.html" class="nav-link">FAQs</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link" data-translate="nav-home">Home</a></li>
+        <li><a href="about.html" class="nav-link active" data-translate="nav-about">About Us</a></li>
+        <li><a href="faq.html" class="nav-link" data-translate="nav-faq">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link" data-translate="nav-contact">Contact Us</a></li>
       </ul>
       
       <!-- CTA Action Buttons -->
       <div class="nav-actions">
-        <a href="download.html" class="btn btn-primary btn-sm">Download App</a>
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn-en active">EN</button>
+          <button class="lang-btn lang-btn-hi">हिन्दी</button>
+        </div>
+        <a href="download.html" class="btn btn-primary btn-sm" data-translate="btn-download">Download App</a>
         <button class="hamburger" aria-label="Toggle Menu">
           <span></span>
           <span></span>
@@ -49,23 +53,29 @@
   <div class="overlay"></div>
   <div class="mobile-drawer">
     <ul class="mobile-nav">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="about.html" class="mobile-nav-link active">About Us</a></li>
-      <li><a href="faq.html" class="mobile-nav-link">FAQs</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+      <li style="margin-bottom: 15px; padding: 0 4px;">
+        <div class="lang-switcher" style="width: 100%; display: flex; justify-content: space-around;">
+          <button class="lang-btn mobile-lang-btn-en active" style="flex: 1;">English</button>
+          <button class="lang-btn mobile-lang-btn-hi" style="flex: 1;">हिन्दी</button>
+        </div>
+      </li>
+      <li><a href="index.html" class="mobile-nav-link" data-translate="nav-home">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link active" data-translate="nav-about">About Us</a></li>
+      <li><a href="faq.html" class="mobile-nav-link" data-translate="nav-faq">FAQs</a></li>
+      <li><a href="contact.html" class="mobile-nav-link" data-translate="nav-contact">Contact Us</a></li>
       <li><a href="privacy.html" class="mobile-nav-link">Privacy Policy</a></li>
       <li><a href="terms.html" class="mobile-nav-link">Terms & Conditions</a></li>
     </ul>
     <div class="mobile-actions">
-      <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary">Download APK</a>
-      <a href="contact.html" class="btn btn-secondary">Register as Dealer</a>
+      <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary" data-translate="btn-download-apk">Download APK</a>
+      <a href="contact.html" class="btn btn-secondary" data-translate="btn-register">Register as Dealer</a>
     </div>
   </div>
 
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>About Us</h1>
+      <h1 data-translate="about-header-title">About Us</h1>
       <div class="page-breadcrumbs">
         <a href="index.html">Home</a>
         <span>/</span>
@@ -81,27 +91,23 @@
       <!-- Overview Grid -->
       <div class="about-overview-grid">
         <div>
-          <span class="badge">Company Overview</span>
+          <span class="badge" data-translate="about-over-badge">Company Overview</span>
           <h2 style="font-size:2.5rem; margin-bottom: 20px;">Solving Tyre Sourcing Digitally</h2>
-          <p style="font-size: 1.1rem; margin-bottom: 20px; line-height: 1.7;">
-            NearZo is a B2B tyre marketplace built from the ground up to solve urgent tyre sourcing challenges for dealers and automotive businesses in India.
-          </p>
-          <p style="color: var(--text-medium); margin-bottom: 24px;">
-            Historically, tyre retailers and parts dealers have had to make dozens of phone calls everyday just to check local availability for client orders. NearZo changes this. By wrapping the local network of tyre wholesalers, distributors, and shops into a single mobile interface, we make locating and buying tyres lightning fast, completely transparent, and hassle-free.
-          </p>
+          <p style="font-size: 1.1rem; margin-bottom: 20px; line-height: 1.7;" data-translate="about-over-p1">NearZo is a B2B tyre marketplace built from the ground up to solve urgent tyre sourcing challenges for dealers and automotive businesses in India.</p>
+          <p style="color: var(--text-medium); margin-bottom: 24px;" data-translate="about-over-p2">Historically, tyre retailers and parts dealers have had to make dozens of phone calls everyday just to check local availability for client orders. NearZo changes this. By wrapping the local network of tyre wholesalers, distributors, and shops into a single mobile interface, we make locating and buying tyres lightning fast, completely transparent, and hassle-free.</p>
           
           <div class="about-stats">
             <div class="stat-item">
               <div class="stat-value">10x</div>
-              <div class="stat-label">Sourcing Speed</div>
+              <div class="stat-label" data-translate="about-stat-1-label">Sourcing Speed</div>
             </div>
             <div class="stat-item">
               <div class="stat-value">500+</div>
-              <div class="stat-label">Connected Dealers</div>
+              <div class="stat-label" data-translate="about-stat-2-label">Connected Dealers</div>
             </div>
             <div class="stat-item">
               <div class="stat-value">99%</div>
-              <div class="stat-label">Sourcing Success</div>
+              <div class="stat-label" data-translate="about-stat-3-label">Sourcing Success</div>
             </div>
           </div>
         </div>
@@ -113,29 +119,29 @@
             <li class="benefit-list-item">
               <div class="benefit-check" style="background-color: rgba(255, 140, 0, 0.1); color: var(--primary-orange);">→</div>
               <div class="benefit-text">
-                <h4 style="font-family:'Outfit'; font-size:1.15rem; font-weight:700;">Faster Sourcing</h4>
-                <p style="font-size: 0.9rem;">Broadcast requests to the entire local grid; receive price quotes in minutes instead of hours.</p>
+                <h4 style="font-family:'Outfit'; font-size:1.15rem; font-weight:700;" data-translate="about-why-1-title">Faster Sourcing</h4>
+                <p style="font-size: 0.9rem;" data-translate="about-why-1-desc">Broadcast requests to the entire local grid; receive price quotes in minutes instead of hours.</p>
               </div>
             </li>
             <li class="benefit-list-item">
               <div class="benefit-check" style="background-color: rgba(255, 140, 0, 0.1); color: var(--primary-orange);">→</div>
               <div class="benefit-text">
-                <h4 style="font-family:'Outfit'; font-size:1.15rem; font-weight:700;">Trusted Dealer Network</h4>
-                <p style="font-size: 0.9rem;">Interact only with verified retailers, wholesalers, and distributors who are authenticated via OTP.</p>
+                <h4 style="font-family:'Outfit'; font-size:1.15rem; font-weight:700;" data-translate="about-why-2-title">Trusted Dealer Network</h4>
+                <p style="font-size: 0.9rem;" data-translate="about-why-2-desc">Interact only with verified retailers, wholesalers, and distributors who are authenticated via OTP.</p>
               </div>
             </li>
             <li class="benefit-list-item">
               <div class="benefit-check" style="background-color: rgba(255, 140, 0, 0.1); color: var(--primary-orange);">→</div>
               <div class="benefit-text">
-                <h4 style="font-family:'Outfit'; font-size:1.15rem; font-weight:700;">Better Business Opportunities</h4>
-                <p style="font-size: 0.9rem;">Wholesalers get direct wholesale leads. Retailers secure hard-to-find sizes and close customer deals instantly.</p>
+                <h4 style="font-family:'Outfit'; font-size:1.15rem; font-weight:700;" data-translate="about-why-3-title">Better Business Opportunities</h4>
+                <p style="font-size: 0.9rem;" data-translate="about-why-3-desc">Wholesalers get direct wholesale leads. Retailers secure hard-to-find sizes and close customer deals instantly.</p>
               </div>
             </li>
             <li class="benefit-list-item">
               <div class="benefit-check" style="background-color: rgba(255, 140, 0, 0.1); color: var(--primary-orange);">→</div>
               <div class="benefit-text">
-                <h4 style="font-family:'Outfit'; font-size:1.15rem; font-weight:700;">Simple and Easy to Use</h4>
-                <p style="font-size: 0.9rem;">Our mobile interface is simple, lightweight, and custom-tailored for business owners who may not be highly technical.</p>
+                <h4 style="font-family:'Outfit'; font-size:1.15rem; font-weight:700;" data-translate="about-why-4-title">Simple and Easy to Use</h4>
+                <p style="font-size: 0.9rem;" data-translate="about-why-4-desc">Our mobile interface is simple, lightweight, and custom-tailored for business owners who may not be highly technical.</p>
               </div>
             </li>
           </ul>
@@ -149,10 +155,8 @@
           <div class="vision-card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
-          <h3>Our Mission</h3>
-          <p style="line-height:1.7; color: var(--text-medium);">
-            To create India's most trusted, transparent, and efficient B2B tyre trading network. We aim to remove sourcing friction, allowing businesses to thrive and customers to stay on the move.
-          </p>
+          <h3 data-translate="about-mission-title">Our Mission</h3>
+          <p style="line-height:1.7; color: var(--text-medium);" data-translate="about-mission-desc">To create India's most trusted, transparent, and efficient B2B tyre trading network. We aim to remove sourcing friction, allowing businesses to thrive and customers to stay on the move.</p>
         </div>
         
         <!-- Vision Card -->
@@ -160,10 +164,8 @@
           <div class="vision-card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
           </div>
-          <h3>Our Vision</h3>
-          <p style="line-height:1.7; color: var(--text-medium);">
-            To digitally connect every single tyre dealer, distributor, and brand in India into a unified real-time logistics ecosystem, setting a new benchmark for automotive parts trading.
-          </p>
+          <h3 data-translate="about-vision-title">Our Vision</h3>
+          <p style="line-height:1.7; color: var(--text-medium);" data-translate="about-vision-desc">To digitally connect every single tyre dealer, distributor, and brand in India into a unified real-time logistics ecosystem, setting a new benchmark for automotive parts trading.</p>
         </div>
       </div>
       

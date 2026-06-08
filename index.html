@@ -37,15 +37,19 @@
       
       <!-- Desktop Navigation Menu -->
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="faq.html" class="nav-link">FAQs</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link active" data-translate="nav-home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-translate="nav-about">About Us</a></li>
+        <li><a href="faq.html" class="nav-link" data-translate="nav-faq">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link" data-translate="nav-contact">Contact Us</a></li>
       </ul>
       
       <!-- CTA Action Buttons -->
       <div class="nav-actions">
-        <a href="download.html" class="btn btn-primary btn-sm">Download App</a>
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn-en active">EN</button>
+          <button class="lang-btn lang-btn-hi">हिन्दी</button>
+        </div>
+        <a href="download.html" class="btn btn-primary btn-sm" data-translate="btn-download">Download App</a>
         <button class="hamburger" aria-label="Toggle Menu">
           <span></span>
           <span></span>
@@ -59,16 +63,22 @@
   <div class="overlay"></div>
   <div class="mobile-drawer">
     <ul class="mobile-nav">
-      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-      <li><a href="faq.html" class="mobile-nav-link">FAQs</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+      <li style="margin-bottom: 15px; padding: 0 4px;">
+        <div class="lang-switcher" style="width: 100%; display: flex; justify-content: space-around;">
+          <button class="lang-btn mobile-lang-btn-en active" style="flex: 1;">English</button>
+          <button class="lang-btn mobile-lang-btn-hi" style="flex: 1;">हिन्दी</button>
+        </div>
+      </li>
+      <li><a href="index.html" class="mobile-nav-link active" data-translate="nav-home">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link" data-translate="nav-about">About Us</a></li>
+      <li><a href="faq.html" class="mobile-nav-link" data-translate="nav-faq">FAQs</a></li>
+      <li><a href="contact.html" class="mobile-nav-link" data-translate="nav-contact">Contact Us</a></li>
       <li><a href="privacy.html" class="mobile-nav-link">Privacy Policy</a></li>
       <li><a href="terms.html" class="mobile-nav-link">Terms & Conditions</a></li>
     </ul>
     <div class="mobile-actions">
-      <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary">Download APK</a>
-      <a href="contact.html" class="btn btn-secondary">Register as Dealer</a>
+      <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary" data-translate="btn-download-apk">Download APK</a>
+      <a href="contact.html" class="btn btn-secondary" data-translate="btn-register">Register as Dealer</a>
     </div>
   </div>
 
@@ -76,8 +86,8 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-content">
-        <span class="hero-tagline">B2B Tyre Marketplace India</span>
-        <h1>Find Tyres Nearby.<br><span class="gradient-text">Get Quotes Fast.</span></h1>
+        <span class="hero-tagline" data-translate="hero-tagline">B2B Tyre Marketplace India</span>
+        <h1 data-translate="hero-title">Find Tyres Nearby.<br><span class="gradient-text">Get Quotes Fast.</span></h1>
         <p class="hero-subheading">
           NearZo helps tyre dealers, retailers, wholesalers, and automotive businesses quickly find stock, compare prices, and close deals through a trusted local dealer network.
         </p>
@@ -159,9 +169,9 @@
   <section class="features-section section-padding">
     <div class="container">
       <div class="section-header text-center">
-        <span class="badge">Features</span>
-        <h2>Designed to Grow Your Tyre Business</h2>
-        <p>NearZo simplifies tyre procurement, helping businesses find stock nearby and close wholesale deals securely.</p>
+        <span class="badge" data-translate="feat-badge">Features</span>
+        <h2 data-translate="feat-title">Designed to Grow Your Tyre Business</h2>
+        <p data-translate="feat-sub">NearZo simplifies tyre procurement, helping businesses find stock nearby and close wholesale deals securely.</p>
       </div>
       
       <div class="features-grid">
@@ -170,8 +180,8 @@
           <div class="feature-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4z"></path></svg>
           </div>
-          <h3>Post Requirements Instantly</h3>
-          <p>Post size, quantity, and brand requirements in 30 seconds. No more tedious dialing and messaging.</p>
+          <h3 data-translate="feat-1-title">Post Requirements Instantly</h3>
+          <p data-translate="feat-1-desc">Post size, quantity, and brand requirements in 30 seconds. No more tedious dialing and messaging.</p>
         </div>
         
         <!-- Feature 2 -->
@@ -179,8 +189,8 @@
           <div class="feature-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
           </div>
-          <h3>Receive Multiple Quotes</h3>
-          <p>Receive competitive price quotes from wholesale dealers in your vicinity within minutes.</p>
+          <h3 data-translate="feat-2-title">Receive Multiple Quotes</h3>
+          <p data-translate="feat-2-desc">Receive competitive price quotes from wholesale dealers in your vicinity within minutes.</p>
         </div>
         
         <!-- Feature 3 -->
@@ -188,8 +198,8 @@
           <div class="feature-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           </div>
-          <h3>Connect with Nearby Dealers</h3>
-          <p>Tap into local inventories. Connect with verified distributors in your target locality instantly.</p>
+          <h3 data-translate="feat-3-title">Connect with Nearby Dealers</h3>
+          <p data-translate="feat-3-desc">Tap into local inventories. Connect with verified distributors in your target locality instantly.</p>
         </div>
         
         <!-- Feature 4 -->
@@ -197,8 +207,8 @@
           <div class="feature-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 11.08 22 12 21.37 12 12 12"></polyline><circle cx="12" cy="12" r="10"></circle><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
-          <h3>Fast Deal Closure</h3>
-          <p>Accept quotes directly, access direct WhatsApp / phone contact lines, and wrap up deals immediately.</p>
+          <h3 data-translate="feat-4-title">Fast Deal Closure</h3>
+          <p data-translate="feat-4-desc">Accept quotes directly, access direct WhatsApp / phone contact lines, and wrap up deals immediately.</p>
         </div>
         
         <!-- Feature 5 -->
@@ -206,8 +216,8 @@
           <div class="feature-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
           </div>
-          <h3>Secure Dealer Network</h3>
-          <p>Trade with peace of mind. Every wholesaler, distributor, and retailer is verified using OTP validation.</p>
+          <h3 data-translate="feat-5-title">Secure Dealer Network</h3>
+          <p data-translate="feat-5-desc">Trade with peace of mind. Every wholesaler, distributor, and retailer is verified using OTP validation.</p>
         </div>
       </div>
     </div>
@@ -217,45 +227,45 @@
   <section class="how-it-works-section section-padding">
     <div class="container">
       <div class="section-header text-center">
-        <span class="badge">Process</span>
-        <h2>How NearZo Works</h2>
-        <p>Connecting tyre buyers and sellers in 5 simple, friction-free steps.</p>
+        <span class="badge" data-translate="proc-badge">Process</span>
+        <h2 data-translate="proc-title">How NearZo Works</h2>
+        <p data-translate="proc-sub">Connecting tyre buyers and sellers in 5 simple, friction-free steps.</p>
       </div>
       
       <div class="steps-timeline">
         <!-- Step 1 -->
         <div class="step-item">
           <div class="step-number-badge">1</div>
-          <h3>Post Requirement</h3>
-          <p>Select tyre size, quantity, brand preference, and post.</p>
+          <h3 data-translate="step-1-title">Post Requirement</h3>
+          <p data-translate="step-1-desc">Select tyre size, quantity, brand preference, and post.</p>
         </div>
         
         <!-- Step 2 -->
         <div class="step-item">
           <div class="step-number-badge">2</div>
-          <h3>Receive Quotes</h3>
-          <p>Wholesalers in your area bid on your tyre request.</p>
+          <h3 data-translate="step-2-title">Receive Quotes</h3>
+          <p data-translate="step-2-desc">Wholesalers in your area bid on your tyre request.</p>
         </div>
         
         <!-- Step 3 -->
         <div class="step-item">
           <div class="step-number-badge">3</div>
-          <h3>Compare Prices</h3>
-          <p>Compare stock availability, delivery times, and price.</p>
+          <h3 data-translate="step-3-title">Compare Prices</h3>
+          <p data-translate="step-3-desc">Compare stock availability, delivery times, and price.</p>
         </div>
         
         <!-- Step 4 -->
         <div class="step-item">
           <div class="step-number-badge">4</div>
-          <h3>Accept Best Deal</h3>
-          <p>Lock in the best price and choose your supplier.</p>
+          <h3 data-translate="step-4-title">Accept Best Deal</h3>
+          <p data-translate="step-4-desc">Lock in the best price and choose your supplier.</p>
         </div>
         
         <!-- Step 5 -->
         <div class="step-item">
           <div class="step-number-badge">5</div>
-          <h3>Call or WhatsApp</h3>
-          <p>Call or WhatsApp to schedule pickup or delivery.</p>
+          <h3 data-translate="step-5-title">Call or WhatsApp</h3>
+          <p data-translate="step-5-desc">Call or WhatsApp to schedule pickup or delivery.</p>
         </div>
       </div>
     </div>
@@ -266,75 +276,75 @@
     <div class="container benefits-layout">
       <!-- Left Visual comparison cards -->
       <div class="benefits-visual">
-        <h3 style="margin-bottom: 20px;">Why Dealers Switch to NearZo</h3>
+        <h3 style="margin-bottom: 20px;" data-translate="ben-title">Why Dealers Switch to NearZo</h3>
         <div class="comparison-card" style="margin-bottom: 24px; border-left-color: #EF4444;">
-          <h4 style="color:#EF4444; font-size: 1rem; margin-bottom: 8px;">The Old Sourcing Way</h4>
+          <h4 style="color:#EF4444; font-size: 1rem; margin-bottom: 8px;" data-translate="ben-header-old">The Old Sourcing Way</h4>
           <div class="comparison-item">
             <span class="comparison-icon" style="color:#EF4444;">✗</span>
-            <p style="font-size:0.875rem;">Calling 10+ wholesale suppliers one-by-one looking for a specific size.</p>
+            <p style="font-size:0.875rem;" data-translate="ben-old-1">Calling 10+ wholesale suppliers one-by-one looking for a specific size.</p>
           </div>
           <div class="comparison-item">
             <span class="comparison-icon" style="color:#EF4444;">✗</span>
-            <p style="font-size:0.875rem;">No transparent pricing; pricing changes based on phone negotiation.</p>
+            <p style="font-size:0.875rem;" data-translate="ben-old-2">No transparent pricing; pricing changes based on phone negotiation.</p>
           </div>
           <div class="comparison-item">
             <span class="comparison-icon" style="color:#EF4444;">✗</span>
-            <p style="font-size:0.875rem;">Losing customers who leave because stock takes too long to find.</p>
+            <p style="font-size:0.875rem;" data-translate="ben-old-3">Losing customers who leave because stock takes too long to find.</p>
           </div>
         </div>
         
         <div class="comparison-card" style="border-left-color: var(--success);">
-          <h4 style="color:var(--success); font-size: 1rem; margin-bottom: 8px;">The NearZo Way</h4>
+          <h4 style="color:var(--success); font-size: 1rem; margin-bottom: 8px;" data-translate="ben-header-new">The NearZo Way</h4>
           <div class="comparison-item">
             <span class="comparison-icon" style="color:var(--success);">✓</span>
-            <p style="font-size:0.875rem;">Post once; local suppliers respond with availability and prices instantly.</p>
+            <p style="font-size:0.875rem;" data-translate="ben-new-1">Post once; local suppliers respond with availability and prices instantly.</p>
           </div>
           <div class="comparison-item">
             <span class="comparison-icon" style="color:var(--success);">✓</span>
-            <p style="font-size:0.875rem;">Compare multiple transparent quotes side-by-side on your screen.</p>
+            <p style="font-size:0.875rem;" data-translate="ben-new-2">Compare multiple transparent quotes side-by-side on your screen.</p>
           </div>
           <div class="comparison-item">
             <span class="comparison-icon" style="color:var(--success);">✓</span>
-            <p style="font-size:0.875rem;">Close sales in minutes; keep your walk-in clients happy.</p>
+            <p style="font-size:0.875rem;" data-translate="ben-new-3">Close sales in minutes; keep your walk-in clients happy.</p>
           </div>
         </div>
       </div>
       
       <!-- Right List of benefits -->
       <div class="benefits-content">
-        <span class="badge">Benefits</span>
-        <h2 style="font-size:2.5rem; margin-bottom: 24px;">Grow Profit. Cut Hassle.</h2>
+        <span class="badge" data-translate="ben-badge">Benefits</span>
+        <h2 style="font-size:2.5rem; margin-bottom: 24px;" data-translate="ben-title">Grow Profit. Cut Hassle.</h2>
         
         <div class="benefits-list">
           <div class="benefit-list-item">
             <div class="benefit-check">✓</div>
             <div class="benefit-text">
-              <h3>Save Time</h3>
-              <p>Eliminate endless outbound calls. Broadcast your tyre requirement in seconds.</p>
+              <h3 data-translate="ben-1-title">Save Time</h3>
+              <p data-translate="ben-1-desc">Eliminate endless outbound calls. Broadcast your tyre requirement in seconds.</p>
             </div>
           </div>
           
           <div class="benefit-list-item">
             <div class="benefit-check">✓</div>
             <div class="benefit-text">
-              <h3>Reduce Phone Calls</h3>
-              <p>Work quietly and efficiently. Receive price points and stock availability details digitally.</p>
+              <h3 data-translate="ben-2-title">Reduce Phone Calls</h3>
+              <p data-translate="ben-2-desc">Work quietly and efficiently. Receive price points and stock availability details digitally.</p>
             </div>
           </div>
           
           <div class="benefit-list-item">
             <div class="benefit-check">✓</div>
             <div class="benefit-text">
-              <h3>Find Stock Faster</h3>
-              <p>Source hard-to-find sizes (SUV, radial, performance tyres) from a large pool of local distributors.</p>
+              <h3 data-translate="ben-3-title">Find Stock Faster</h3>
+              <p data-translate="ben-3-desc">Source hard-to-find sizes (SUV, radial, performance tyres) from a large pool of local distributors.</p>
             </div>
           </div>
           
           <div class="benefit-list-item">
             <div class="benefit-check">✓</div>
             <div class="benefit-text">
-              <h3>Expand Business Network</h3>
-              <p>Build relationships with new trusted tyre wholesalers, retailers, and distributors in your region.</p>
+              <h3 data-translate="ben-4-title">Expand Business Network</h3>
+              <p data-translate="ben-4-desc">Build relationships with new trusted tyre wholesalers, retailers, and distributors in your region.</p>
             </div>
           </div>
         </div>
@@ -346,11 +356,9 @@
   <section class="coverage-section section-padding">
     <div class="container coverage-grid">
       <div>
-        <span class="badge" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #FFF;">Active Locations</span>
-        <h2>Sourcing Tyres Locally</h2>
-        <p style="color: var(--text-light-muted); margin-bottom: 24px; font-size: 1.1rem;">
-          NearZo operates a robust network of automotive parts and tyre dealers across key regions.
-        </p>
+        <span class="badge" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #FFF;" data-translate="cov-badge">Active Locations</span>
+        <h2 data-translate="cov-title">Sourcing Tyres Locally</h2>
+        <p style="color: var(--text-light-muted); margin-bottom: 24px; font-size: 1.1rem;" data-translate="cov-sub">NearZo operates a robust network of automotive parts and tyre dealers across key regions.</p>
         
         <div class="coverage-cities">
           <span class="city-tag">Navi Mumbai</span>
@@ -363,8 +371,8 @@
         <div class="coverage-expansion">
           <div class="radar-pulse-dot"></div>
           <div>
-            <h4 style="font-family:'Outfit'; font-weight:700; margin-bottom: 2px;">Expanding Across India</h4>
-            <p style="font-size:0.875rem; color:var(--text-light-muted); margin:0;">Adding more dealers, wholesale hubs, and cities daily.</p>
+            <h4 style="font-family:'Outfit'; font-weight:700; margin-bottom: 2px;" data-translate="cov-exp-title">Expanding Across India</h4>
+            <p style="font-size:0.875rem; color:var(--text-light-muted); margin:0;" data-translate="cov-exp-sub">Adding more dealers, wholesale hubs, and cities daily.</p>
           </div>
         </div>
       </div>
@@ -406,9 +414,9 @@
   <section class="testimonials-section section-padding">
     <div class="container">
       <div class="section-header text-center">
-        <span class="badge">Testimonials</span>
-        <h2>What Tyre Dealers Say</h2>
-        <p>Hear from real business owners who rely on NearZo daily to source stocks.</p>
+        <span class="badge" data-translate="test-badge">Testimonials</span>
+        <h2 data-translate="test-title">What Tyre Dealers Say</h2>
+        <p data-translate="test-sub">Hear from real business owners who rely on NearZo daily to source stocks.</p>
       </div>
       
       <div class="testimonials-grid">
@@ -416,15 +424,12 @@
         <div class="testimonial-card">
           <div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "Before NearZo, we spent 2 hours every morning calling distributors in Panvel and Kamothe just to locate 18-inch SUV tyres. Now I post a query on the app and get quotes in 5 minutes. Saves us massive time!"
-            </p>
+            <p class="testimonial-quote" data-translate="test-1-quote">"Before NearZo, we spent 2 hours every morning calling distributors in Panvel and Kamothe just to locate 18-inch SUV tyres. Now I post a query on the app and get quotes in 5 minutes. Saves us massive time!"</p>
           </div>
           <div class="testimonial-author">
             <div class="author-avatar-placeholder">RK</div>
             <div class="author-info">
-              <h4>Rajesh Kumar</h4>
-              <p>Owner, Kumar Tyre Zone (Panvel)</p>
+              <div data-translate="test-1-author"><h4>Rajesh Kumar</h4><p>Owner, Kumar Tyre Zone (Panvel)</p></div>
             </div>
           </div>
         </div>
@@ -433,15 +438,12 @@
         <div class="testimonial-card">
           <div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "Being a wholesaler, finding new retailers was expensive. NearZo sends matching requests from nearby retail shops straight to my mobile. Our monthly business volumes have increased by 25%."
-            </p>
+            <p class="testimonial-quote" data-translate="test-2-quote">"Being a wholesaler, finding new retailers was expensive. NearZo sends matching requests from retail shops straight to my mobile. Our monthly business volumes have increased by 25%."</p>
           </div>
           <div class="testimonial-author">
             <div class="author-avatar-placeholder">MS</div>
             <div class="author-info">
-              <h4>Mandeep Singh</h4>
-              <p>Partner, Guru Nanak Tyre House (Navi Mumbai)</p>
+              <div data-translate="test-2-author"><h4>Mandeep Singh</h4><p>Partner, Guru Nanak Tyre House (Navi Mumbai)</p></div>
             </div>
           </div>
         </div>
@@ -450,15 +452,12 @@
         <div class="testimonial-card">
           <div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "Customer walked in needing MRF tyres. We had no stock. We posted on NearZo, received a quote from a dealer 2 km away, picked it up, and fitted it for our customer in 40 minutes. Simply outstanding!"
-            </p>
+            <p class="testimonial-quote" data-translate="test-3-quote">"Customer walked in needing MRF tyres. We had no stock. We posted on NearZo, received a quote from a dealer 2 km away, picked it up, and fitted it for our customer in 40 minutes. Simply outstanding!"</p>
           </div>
           <div class="testimonial-author">
             <div class="author-avatar-placeholder">AP</div>
             <div class="author-info">
-              <h4>Amit Patel</h4>
-              <p>Proprietor, Patel Wheels (Kharghar)</p>
+              <div data-translate="test-3-author"><h4>Amit Patel</h4><p>Proprietor, Patel Wheels (Kharghar)</p></div>
             </div>
           </div>
         </div>
@@ -469,10 +468,10 @@
   <!-- Ready to Find Tyres Banner -->
   <section class="bottom-cta">
     <div class="container">
-      <h2>Ready to Find Tyres Faster?</h2>
-      <p>Download the NearZo app today and join India's fastest growing B2B tyre trading dealer network.</p>
+      <h2 data-translate="cta-banner-title">Ready to Find Tyres Faster?</h2>
+      <p data-translate="cta-banner-sub">Download the NearZo app today and join India's fastest growing B2B tyre trading dealer network.</p>
       <a href="https://drive.google.com/file/d/1KY9a7E-q0NbKFfAXznCwFnb-aPPWeFNE/view?usp=sharing" target="_blank" class="btn btn-primary btn-lg">
-        Download NearZo App
+        <span data-translate="btn-download-now">Download NearZo App</span>
       </a>
     </div>
   </section>
