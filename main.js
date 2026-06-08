@@ -386,7 +386,8 @@ function initLanguageTranslation() {
       "faq-header-title": "Frequently Asked Questions",
       "faq-badge": "Help Desk",
       "faq-title": "Got Questions? We Have Answers",
-      "faq-sub": "Everything you need to know about the NearZo tyre marketplace platform."
+      "faq-sub": "Everything you need to know about the NearZo tyre marketplace platform.",
+      "privacy-policy-header": "Privacy Policy"
     },
     hi: {
       // Navigation & Globals
@@ -518,7 +519,8 @@ function initLanguageTranslation() {
       "faq-header-title": "अक्सर पूछे जाने वाले प्रश्न",
       "faq-badge": "सहायता डेस्क",
       "faq-title": "कोई सवाल है? हमारे पास जवाब हैं",
-      "faq-sub": "नियरज़ो टायर मार्केटप्लेस प्लेटफॉर्म के बारे में वह सब कुछ जो आप जानना चाहते हैं।"
+      "faq-sub": "नियरज़ो टायर मार्केटप्लेस प्लेटफॉर्म के बारे में वह सब कुछ जो आप जानना चाहते हैं।",
+      "privacy-policy-header": "गोपनीयता नीति"
     }
   };
 
