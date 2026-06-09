@@ -667,6 +667,193 @@ header.scrolled .logo-img {
   font-weight: 600;
 }
 
+/* Animated 3D CSS Tyres */
+.floating-tyre-container {
+  position: absolute;
+  z-index: 3;
+  perspective: 600px;
+}
+
+.floating-tyre-container.primary {
+  top: 12%;
+  left: -55px;
+  width: 140px;
+  height: 140px;
+  animation: floatUpDownPrimary 6s ease-in-out infinite;
+}
+
+.floating-tyre-container.secondary {
+  top: 60%;
+  right: -45px;
+  width: 105px;
+  height: 105px;
+  animation: floatUpDownSecondary 7s ease-in-out infinite;
+}
+
+.tyre-3d {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.floating-tyre-container.primary .tyre-3d {
+  transform: rotateY(-25deg) rotateX(12deg);
+}
+
+.floating-tyre-container.secondary .tyre-3d {
+  transform: rotateY(25deg) rotateX(-12deg);
+}
+
+.tyre-side {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2a2e35 0%, #17191d 70%, #0d0f11 100%);
+  border: 18px solid #1f2227;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.85), 0 15px 30px rgba(0, 0, 0, 0.45);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rollTyreClockwise 12s linear infinite;
+  transform-origin: center;
+}
+
+.floating-tyre-container.secondary .tyre-side {
+  border-width: 13px;
+  animation: rollTyreCounterClockwise 16s linear infinite;
+}
+
+/* Tread lines on the edge */
+.tyre-tread-pattern {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  border: 4px dashed #0c0d0f;
+  pointer-events: none;
+  z-index: 2;
+  animation: rollTyreClockwise 12s linear infinite;
+}
+
+.floating-tyre-container.secondary .tyre-tread-pattern {
+  animation: rollTyreCounterClockwise 16s linear infinite;
+}
+
+.tyre-rim-alloy {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #a0b2c6 0%, #486581 60%, #0f2537 100%);
+  border: 4px solid #627d98;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-tyre-container.secondary .tyre-rim-alloy {
+  width: 52px;
+  height: 52px;
+  border-width: 3px;
+}
+
+.spoke-line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent 15%, #bcccdc 15%, #bcccdc 85%, transparent 85%);
+}
+
+.floating-tyre-container.secondary .spoke-line {
+  height: 3px;
+}
+
+.line-1 { transform: rotate(0deg); }
+.line-2 { transform: rotate(36deg); }
+.line-3 { transform: rotate(72deg); }
+.line-4 { transform: rotate(108deg); }
+.line-5 { transform: rotate(144deg); }
+
+.rim-hub {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #f0f4f8 0%, #627d98 80%, #334e68 100%);
+  border-radius: 50%;
+  border: 2px solid #829ab1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  z-index: 5;
+}
+
+.floating-tyre-container.secondary .rim-hub {
+  width: 12px;
+  height: 12px;
+  border-width: 1.5px;
+}
+
+/* Floating & Rolling Keyframes */
+@keyframes floatUpDownPrimary {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatUpDownSecondary {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes rollTyreClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rollTyreCounterClockwise {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Responsive fixes for floating tyres */
+@media (max-width: 992px) {
+  .floating-tyre-container.primary {
+    left: 20%;
+    top: 5%;
+  }
+  .floating-tyre-container.secondary {
+    right: 22%;
+    top: 55%;
+  }
+}
+
+@media (max-width: 576px) {
+  .floating-tyre-container.primary {
+    left: 10%;
+    width: 100px;
+    height: 100px;
+  }
+  .floating-tyre-container.primary .tyre-rim-alloy {
+    width: 50px;
+    height: 50px;
+  }
+  .floating-tyre-container.secondary {
+    right: 12%;
+    width: 80px;
+    height: 80px;
+  }
+  .floating-tyre-container.secondary .tyre-rim-alloy {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /* Decorative visual background circle */
 .radar-bg {
   position: absolute;
