@@ -154,16 +154,13 @@ function initContactForm() {
 
     fetch(webAppUrl, {
       method: 'POST',
+      mode: 'no-cors',
       body: formData
     })
-    .then(response => response.json())
-    .then(data => {
-      if (data.result === 'success') {
-        showToast('Thank you! Our representative will call you within 24 hours.');
-        contactForm.reset();
-      } else {
-        alert('There was an error sending your inquiry. Please try again.');
-      }
+    .then(() => {
+      // no-cors mode returns an opaque response, so we assume success if no network error occurred
+      showToast('Thank you! Our representative will call you within 24 hours.');
+      contactForm.reset();
     })
     .catch(error => {
       console.error('Error:', error);
