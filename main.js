@@ -98,23 +98,40 @@ function initFaqAccordions() {
   });
 }
 
-/* --- Contact Form Validation & Submission Confirmation --- */
 function initContactForm() {
   const contactForm = document.getElementById('nearzo-contact-form');
   if (!contactForm) return;
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  let iframeSubmitted = false;
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const originalText = submitBtn ? submitBtn.innerHTML : 'Submit Dealer Registration';
+  const iframe = document.getElementById('hidden_iframe');
 
+  // Handle standard form submission target response
+  if (iframe) {
+    iframe.addEventListener('load', () => {
+      if (iframeSubmitted) {
+        showToast('Thank you! Our representative will call you within 24 hours.');
+        contactForm.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+        iframeSubmitted = false;
+      }
+    });
+  }
+
+  contactForm.addEventListener('submit', (e) => {
     // Field references
     const nameInput = document.getElementById('contact-name');
     const phoneInput = document.getElementById('contact-phone');
     const businessInput = document.getElementById('contact-business');
     const cityInput = document.getElementById('contact-city');
-    const messageInput = document.getElementById('contact-message');
 
     // Basic Validation checks
     if (!nameInput.value.trim()) {
+      e.preventDefault();
       showError(nameInput, 'Name is required');
       return;
     }
@@ -122,54 +139,29 @@ function initContactForm() {
     // Indian Mobile number validation (10 digits, optionally starting with country code or 0)
     const phoneVal = phoneInput.value.trim().replace(/\D/g, '');
     if (phoneVal.length < 10) {
+      e.preventDefault();
       showError(phoneInput, 'Enter a valid 10-digit mobile number');
       return;
     }
 
     if (!businessInput.value.trim()) {
+      e.preventDefault();
       showError(businessInput, 'Business Name is required');
       return;
     }
 
     if (!cityInput.value.trim()) {
+      e.preventDefault();
       showError(cityInput, 'City/Location is required');
       return;
     }
 
-    // Send Data to Google Sheet via Google Apps Script Web App
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Sending...';
-
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbyYflSnUpl9fGOW5sDelKyINW6aT9gqardbGG7XZKYTyjsGoooLu5UwwXFZ-64rTu7abQ/exec';
-    
-    // Using URLSearchParams to simulate a form submission (application/x-www-form-urlencoded)
-    const formData = new URLSearchParams();
-    formData.append('name', nameInput.value.trim());
-    formData.append('phone', phoneInput.value.trim());
-    formData.append('businessName', businessInput.value.trim());
-    formData.append('city', cityInput.value.trim());
-    formData.append('message', messageInput.value.trim());
-
-    fetch(webAppUrl, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData
-    })
-    .then(() => {
-      // no-cors mode returns an opaque response, so we assume success if no network error occurred
-      showToast('Thank you! Our representative will call you within 24 hours.');
-      contactForm.reset();
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('Network error. Please try again later.');
-    })
-    .finally(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-    });
+    // Validation passed - let form submit to hidden iframe
+    iframeSubmitted = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending...';
+    }
   });
 
   function showError(inputElement, msg) {

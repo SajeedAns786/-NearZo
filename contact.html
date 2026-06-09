@@ -91,36 +91,37 @@
       <!-- Left side contact card form -->
       <div class="contact-card">
         <h2 data-translate="contact-form-title">Register as Dealer / Send Inquiry</h2>
-        <form id="nearzo-contact-form" novalidate>
+        <form id="nearzo-contact-form" action="https://script.google.com/macros/s/AKfycbyYflSnUpl9fGOW5sDelKyINW6aT9gqardbGG7XZKYTyjsGoooLu5UwwXFZ-64rTu7abQ/exec" method="POST" target="hidden_iframe" novalidate>
           <div class="form-group">
             <label for="contact-name" data-translate="contact-lbl-name">Full Name *</label>
-            <input type="text" id="contact-name" class="form-control" placeholder="Enter your name" required>
+            <input type="text" id="contact-name" name="name" class="form-control" placeholder="Enter your name" required>
           </div>
           
           <div class="form-group">
             <label for="contact-phone" data-translate="contact-lbl-phone">Mobile Number *</label>
-            <input type="tel" id="contact-phone" class="form-control" placeholder="Enter 10-digit mobile number" required>
+            <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="Enter 10-digit mobile number" required>
           </div>
           
           <div class="form-group">
             <label for="contact-business" data-translate="contact-lbl-business">Business Name *</label>
-            <input type="text" id="contact-business" class="form-control" placeholder="Enter tyre shop / business name" required>
+            <input type="text" id="contact-business" name="businessName" class="form-control" placeholder="Enter tyre shop / business name" required>
           </div>
           
           <div class="form-group">
             <label for="contact-city" data-translate="contact-lbl-city">City / Area *</label>
-            <input type="text" id="contact-city" class="form-control" placeholder="e.g. Panvel, Navi Mumbai" required>
+            <input type="text" id="contact-city" name="city" class="form-control" placeholder="e.g. Panvel, Navi Mumbai" required>
           </div>
           
           <div class="form-group">
             <label for="contact-message" data-translate="contact-lbl-message">Message (Optional)</label>
-            <textarea id="contact-message" class="form-control" placeholder="Specify tyre requirements or query..."></textarea>
+            <textarea id="contact-message" name="message" class="form-control" placeholder="Specify tyre requirements or query..."></textarea>
           </div>
           
           <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
             <span data-translate="contact-btn-submit">Submit Dealer Registration</span>
           </button>
         </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
       </div>
       
       <!-- Right side information panel -->
