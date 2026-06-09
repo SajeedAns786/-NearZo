@@ -136,21 +136,43 @@ function initContactForm() {
       return;
     }
 
-    // Success Simulation
+    // Send Data to Google Sheet via Google Apps Script Web App
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = 'Sending...';
 
-    setTimeout(() => {
-      // Create and show success toast
-      showToast('Thank you! Our representative will call you within 24 hours.');
-      
-      // Reset form
-      contactForm.reset();
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbyYflSnUpl9fGOW5sDelKyINW6aT9gqardbGG7XZKYTyjsGoooLu5UwwXFZ-64rTu7abQ/exec';
+    
+    // Using URLSearchParams to simulate a form submission (application/x-www-form-urlencoded)
+    const formData = new URLSearchParams();
+    formData.append('name', nameInput.value.trim());
+    formData.append('phone', phoneInput.value.trim());
+    formData.append('businessName', businessInput.value.trim());
+    formData.append('city', cityInput.value.trim());
+    formData.append('message', messageInput.value.trim());
+
+    fetch(webAppUrl, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.result === 'success') {
+        showToast('Thank you! Our representative will call you within 24 hours.');
+        contactForm.reset();
+      } else {
+        alert('There was an error sending your inquiry. Please try again.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Network error. Please try again later.');
+    })
+    .finally(() => {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
-    }, 1200);
+    });
   });
 
   function showError(inputElement, msg) {

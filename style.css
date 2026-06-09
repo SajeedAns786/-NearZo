@@ -280,15 +280,15 @@ header.scrolled {
 }
 
 .logo-img {
-  height: 125px;
+  height: 160px;
   width: auto;
-  margin: -35px -35px;
+  margin: -45px -45px;
   object-fit: contain;
 }
 
 header.scrolled .logo-img {
-  height: 110px;
-  margin: -30px -30px;
+  height: 140px;
+  margin: -35px -35px;
 }
 
 .nav-menu {
