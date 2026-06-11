@@ -5,7 +5,7 @@ const crypto = require('crypto');
 const https = require('https');
 const querystring = require('querystring');
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Load environment variables from .env file
 if (fs.existsSync('.env')) {
@@ -308,6 +308,6 @@ http.createServer(async (req, res) => {
       res.end(content, 'utf-8');
     }
   });
-}).listen(PORT, '127.0.0.1', () => {
+}).listen(PORT, () => {
   console.log(`Server running at http://127.0.0.1:${PORT}/`);
 });
